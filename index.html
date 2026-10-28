@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кастомная LMS под ваш проект — ТЕХЦЕХ</title>
+  <meta name="description" content="Разработка кастомных образовательных платформ: сайт продаж, личный кабинет, защита контента, автоматическая выдача доступов. Гибче конструкторов и выгоднее на дистанции.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo">ТЕХЦЕХ</a>
+
+      <nav class="header__nav">
+        <a href="#what-i-do">Что я делаю</a>
+        <a href="#comparison">Сравнение</a>
+        <a href="#case">Кейс</a>
+        <a href="#process">Как проходит работа</a>
+      </nav>
+
+      <div class="header__controls">
+        <!-- переключатель языка -->
+        <a href="index.en.html" class="header__lang" aria-label="Switch to English">EN</a>
+        <!-- переключатель темы -->
+        <button type="button" class="header__theme" id="themeToggle" aria-label="Переключить тему">
+          <span class="theme-icon theme-icon--light">☀</span>
+          <span class="theme-icon theme-icon--dark">☾</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+        <!-- ============ 1. HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__eyebrow">Кастомная разработка LMS</span>
+          <h1 class="hero__title">
+            Кастомная LMS под ваш проект — гибче конструкторов и выгоднее на дистанции
+          </h1>
+          <p class="hero__subtitle">
+            Разрабатываю образовательные платформы с нуля: сайт продаж, личный кабинет,
+            защита контента, автоматическая выдача доступов. Не конструктор курсов —
+            система, которая работает на вашу бизнес-логику, а не наоборот.
+          </p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--cta btn--lg">Обсудить проект</a>
+            <a href="#case" class="btn btn--secondary btn--lg">Смотреть кейс</a>
+          </div>
+          <ul class="hero__points">
+            <li>Production-опыт, не прототип</li>
+            <li>Платежи с резервированием</li>
+            <li>Защита видео и материалов</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__mockup">
+            <div class="hero__mockup-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="hero__mockup-body">
+              <div class="hero__mockup-line hero__mockup-line--wide"></div>
+              <div class="hero__mockup-line"></div>
+              <div class="hero__mockup-line hero__mockup-line--short"></div>
+              <div class="hero__mockup-cards">
+                <div class="hero__mockup-card"></div>
+                <div class="hero__mockup-card"></div>
+                <div class="hero__mockup-card"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- ============ 2. ПРОБЛЕМА ============ -->
+    <section class="problem" id="problem">
+      <div class="container">
+        <div class="section-head text-center">
+          <h2 class="section-title">Почему конструкторы курсов не всегда работают</h2>
+          <p class="section-lead">
+            GetCourse, Tilda и похожие платформы решают задачу «быстро запустить курсы».
+            Но у них есть цена, которую вы платите постоянно.
+          </p>
+        </div>
+
+        <div class="problem__grid">
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">%</div>
+            <h3>Комиссия с каждой продажи</h3>
+            <p>Чем успешнее проект, тем больше вы отдаёте платформе — за то, что уже могли бы владеть сами.</p>
+          </article>
+
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">⚙</div>
+            <h3>Ограниченная логика</h3>
+            <p>Уникальные тарифы, нестандартные сценарии доступа, специфические интеграции — всё упирается в «а так нельзя».</p>
+          </article>
+
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">🔒</div>
+            <h3>Слабая защита контента</h3>
+            <p>Видео и материалы утекают, а вы не можете это остановить.</p>
+          </article>
+
+          <article class="problem__card">
+            <div class="problem__icon" aria-hidden="true">⛓</div>
+            <h3>Зависимость</h3>
+            <p>Ваши клиенты, платежи и контент живут в чужой экосистеме. Условия меняются — вы подстраиваетесь.</p>
+          </article>
+        </div>
+
+        <p class="problem__closing">
+          Если ваш проект перерос конструктор — пора владеть платформой, а не арендовать её.
+        </p>
+      </div>
+    </section>
+
+        <!-- ============ 3. ЧТО Я ДЕЛАЮ ============ -->
+    <section class="services" id="what-i-do">
+      <div class="container">
+        <div class="section-head text-center">
+          <h2 class="section-title">Платформа, которая закрывает весь путь клиента</h2>
+          <p class="section-lead">
+            От первой продажи до повторных покупок — всё в одной системе, которая принадлежит вам.
+          </p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
+            </div>
+            <h3>Сайт продаж + оплата</h3>
+            <p>Страницы тарифов, приём платежей, автоматическая выдача доступа сразу после оплаты. Подключу одну или две кассы — чтобы продажи не останавливались, если что-то пойдёт не так.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+            <h3>Личный кабинет участника</h3>
+            <p>Клиент видит свой тариф, срок доступа и каталог материалов: видео, PDF, тексты. Удобно на компьютере и на телефоне.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            </div>
+            <h3>Защита контента</h3>
+            <p>Видео защищено от скачивания и привязано к сессии пользователя. Материалы нельзя просто «унести» и перепродать.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+            </div>
+            <h3>Автоматизация доступов</h3>
+            <p>Оплата подтверждена — доступ выдан. Без ручной работы и без риска, что клиент заплатил, но остался ни с чем.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M9 9v11"/></svg>
+            </div>
+            <h3>Админ-панель</h3>
+            <p>Платежи, статусы пользователей, выдача и отзыв доступов, ключевые метрики — всё в одном месте.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+            </div>
+            <h3>Сопровождение после запуска</h3>
+            <p>Платформа не «сдаётся и забывается»: слежу за стабильностью, правлю проблемы, развиваю по мере роста проекта.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+        <!-- ============ 4. СРАВНЕНИЕ / ЭКОНОМИКА ============ -->
+    <section class="comparison" id="comparison">
+      <div class="container">
+        <div class="section-head text-center">
+          <h2 class="section-title">Экономика решения</h2>
+          <p class="section-lead">
+            Конструктор дешёвый на старте — и дорогой на дистанции.
+            Кастомная LMS — это разовая инвестиция в актив, который принадлежит вам.
+          </p>
+        </div>
+
+        <div class="comparison__table-wrap">
+          <table class="comparison__table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Конструктор</th>
+                <th scope="col" class="comparison__col--custom">Кастомная LMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Комиссия с продаж</th>
+                <td>Есть, постоянно</td>
+                <td class="comparison__col--custom">Нет — платформа ваша</td>
+              </tr>
+              <tr>
+                <th scope="row">Логика и тарифы</th>
+                <td>По шаблону платформы</td>
+                <td class="comparison__col--custom">Под ваш проект</td>
+              </tr>
+              <tr>
+                <th scope="row">Защита контента</th>
+                <td>Базовая</td>
+                <td class="comparison__col--custom">Полноценная</td>
+              </tr>
+              <tr>
+                <th scope="row">Владение</th>
+                <td>Аренда</td>
+                <td class="comparison__col--custom">Актив на вашем сервере</td>
+              </tr>
+              <tr>
+                <th scope="row">Рост проекта</th>
+                <td>Растёт и стоимость</td>
+                <td class="comparison__col--custom">Растёт только ваша выручка</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="comparison__note">
+          <p>
+            Готовая кастомная LMS у российских студий стоит от 600 000 до 1 500 000 ₽
+            (по международным меркам — от $40 000). Это звучит как крупная сумма — пока
+            не сравнить её с тем, сколько проект отдаёт конструктору за годы работы.
+            На горизонте 2–3 лет кастомная платформа окупается и дальше работает только на вас.
+          </p>
+        </div>
+      </div>
+    </section>
+
+        <!-- ============ 5. КЕЙС ============ -->
+    <section class="case" id="case">
+      <div class="container">
+        <div class="section-head text-center">
+          <h2 class="section-title">Как это работает в production</h2>
+          <p class="section-lead">
+            «Фабрика заготовок» — кулинарный клуб, для которого я разработал связку
+            «сайт продаж + закрытая образовательная платформа». Проект не в прототипе —
+            он работает с реальными людьми и реальными платежами.
+          </p>
+        </div>
+
+        <div class="case__layout">
+          <div class="case__info">
+            <h3 class="case__subtitle">Что реализовано</h3>
+            <ul class="case__list">
+              <li>Два тарифа: базовый ведёт в закрытый Telegram-клуб, премиальный — на веб-платформу.</li>
+              <li>Приём платежей через основной и резервный шлюз — если один недоступен, продажи продолжаются.</li>
+              <li>Автоматическая выдача доступа после оплаты, с защитой от повторной обработки платежей.</li>
+              <li>Личный кабинет с каталогом материалов: видео, PDF-сборники, тексты.</li>
+              <li>Защищённое видео, привязанное к сессии пользователя.</li>
+              <li>Админ-панель: платежи, доступы, метрики.</li>
+            </ul>
+
+            <div class="case__tags">
+              <span class="tag">Production</span>
+              <span class="tag">Платежи с резервированием</span>
+              <span class="tag">Защита видео</span>
+              <span class="tag">Роли и доступы</span>
+            </div>
+          </div>
+
+          <div class="case__gallery">
+            <!-- плейсхолдеры: заменить на реальные скриншоты -->
+            <figure class="case__shot case__shot--wide">
+              <div class="case__shot-placeholder">
+                <span>Скриншот: главная страница</span>
+              </div>
+              <figcaption>Сайт продаж</figcaption>
+            </figure>
+
+            <figure class="case__shot">
+              <div class="case__shot-placeholder">
+                <span>Скриншот: личный кабинет</span>
+              </div>
+              <figcaption>Кабинет участника</figcaption>
+            </figure>
+
+            <figure class="case__shot">
+              <div class="case__shot-placeholder">
+                <span>Скриншот: админ-панель</span>
+              </div>
+              <figcaption>Админ-панель</figcaption>
+            </figure>
+
+            <figure class="case__shot case__shot--wide">
+              <div class="case__shot-placeholder">
+                <span>Скриншот: мобильная версия</span>
+              </div>
+              <figcaption>Мобильная версия</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- ============ 6. ПРОЦЕСС ============ -->
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-head text-center">
+          <h2 class="section-title">От идеи до запуска</h2>
+          <p class="section-lead">
+            Понятный процесс без сюрпризов — вы знаете, что происходит на каждом этапе.
+          </p>
+        </div>
+
+        <ol class="process__steps">
+          <li class="process__step">
+            <span class="process__num">01</span>
+            <div class="process__body">
+              <h3>Обсуждаем проект</h3>
+              <p>Тарифы, аудитория, контент, платежи — что должно быть и как это работает в вашей модели.</p>
+            </div>
+          </li>
+          <li class="process__step">
+            <span class="process__num">02</span>
+            <div class="process__body">
+              <h3>Проектирую</h3>
+              <p>Структура страниц, сценарии доступа, схема оплаты.</p>
+            </div>
+          </li>
+          <li class="process__step">
+            <span class="process__num">03</span>
+            <div class="process__body">
+              <h3>Разрабатываю</h3>
+              <p>Сайт продаж, кабинет, админка, интеграции.</p>
+            </div>
+          </li>
+          <li class="process__step">
+            <span class="process__num">04</span>
+            <div class="process__body">
+              <h3>Запускаем</h3>
+              <p>Тестируем платежи и доступы, выводим в production.</p>
+            </div>
+          </li>
+          <li class="process__step">
+            <span class="process__num">05</span>
+            <div class="process__body">
+              <h3>Сопровождаю</h3>
+              <p>Платформа живёт и развивается вместе с проектом.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+        <!-- ============ 7. ГРАНИЦЫ ============ -->
+    <section class="boundaries" id="boundaries">
+      <div class="container">
+        <div class="section-head text-center">
+          <h2 class="section-title">Что сюда не входит</h2>
+          <p class="section-lead">
+            Чтобы не было сюрпризов — это не конструктор курсов (пока что).
+          </p>
+        </div>
+
+        <div class="boundaries__box">
+          <ul class="boundaries__list">
+            <li>Нет редактора курсов «из коробки»</li>
+            <li>Нет встроенных тестов и экзаменов</li>
+            <li>Нет сертификатов о прохождении</li>
+            <li>Нет сложного трекинга прогресса</li>
+          </ul>
+          <p class="boundaries__note">
+            Если такие функции нужны — обсуждаем отдельно.
+            Зато всё, что входит, сделано под ваш проект и принадлежит вам.
+          </p>
+        </div>
+      </div>
+    </section>
+
+        <!-- ============ 8. CTA + ФОРМА ============ -->
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta__box">
+          <div class="cta__content">
+            <h2 class="cta__title">Обсудим ваш проект?</h2>
+            <p class="cta__text">
+              Расскажите пару слов о задаче — свяжусь с вами, чтобы обсудить детали,
+              сроки и стоимость. Без обязательств.
+            </p>
+          </div>
+
+          <form class="cta__form" id="contactForm" novalidate>
+            <div class="form-field">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required autocomplete="name">
+            </div>
+
+            <div class="form-field">
+              <label for="contact">Контакт для связи</label>
+              <input type="text" id="contact" name="contact" placeholder="Telegram, телефон или email" required autocomplete="off">
+            </div>
+
+            <div class="form-field">
+              <label for="message">Кратко о проекте</label>
+              <textarea id="message" name="message" placeholder="Что за проект, какая задача, что уже есть" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--cta btn--lg cta__submit">Отправить</button>
+
+            <p class="cta__form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <p class="cta__signature">ТЕХЦЕХ</p>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand-col">
+        <span class="footer__brand">ТЕХЦЕХ</span>
+        <span class="footer__tagline">Кастомные LMS под ваш проект</span>
+      </div>
+      <nav class="footer__nav" aria-label="Футер">
+        <a href="#what-i-do">Что я делаю</a>
+        <a href="#comparison">Сравнение</a>
+        <a href="#case">Кейс</a>
+        <a href="#contact">Обсудить проект</a>
+      </nav>
+      <span class="footer__copy">© <span id="year"></span></span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
