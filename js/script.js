@@ -101,7 +101,8 @@
   }
 
   if (!storedTheme && window.matchMedia) {
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+    const colorScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const syncSystemTheme = (event) => {
       let manualChoice = null;
       try {
         manualChoice = localStorage.getItem(themeKey);
@@ -109,7 +110,12 @@
         // Ignore unavailable storage.
       }
       if (!manualChoice) applyTheme(event.matches ? "dark" : "light");
-    });
+    };
+    if (typeof colorScheme.addEventListener === "function") {
+      colorScheme.addEventListener("change", syncSystemTheme);
+    } else if (typeof colorScheme.addListener === "function") {
+      colorScheme.addListener(syncSystemTheme);
+    }
   }
 
   const year = document.getElementById("year");
@@ -165,15 +171,44 @@
 
     let pointerStart = null;
     const stack = carousel.querySelector(".ac-stack");
-    stack?.addEventListener("pointerdown", (event) => { pointerStart = event.clientX; });
-    stack?.addEventListener("pointerup", (event) => {
-      if (pointerStart === null) return;
-      const distance = event.clientX - pointerStart;
-      pointerStart = null;
-      if (distance < -55) showSlide(activeIndex + 1, 1);
-      else if (distance > 55) showSlide(activeIndex - 1, -1);
-    });
-    stack?.addEventListener("pointercancel", () => { pointerStart = null; });
+    const finishSwipe = (distanceX, distanceY) => {
+      if (Math.abs(distanceX) < 55 || Math.abs(distanceX) <= Math.abs(distanceY)) return;
+      if (distanceX < 0) showSlide(activeIndex + 1, 1);
+      else showSlide(activeIndex - 1, -1);
+    };
+
+    if (stack && "PointerEvent" in window) {
+      stack.addEventListener("pointerdown", (event) => {
+        if (event.pointerType === "mouse" && event.button !== 0) return;
+        pointerStart = { x: event.clientX, y: event.clientY };
+        if (typeof stack.setPointerCapture === "function") {
+          try {
+            stack.setPointerCapture(event.pointerId);
+          } catch (error) {
+            // Keep swipe available in browsers that reject pointer capture.
+          }
+        }
+      });
+      stack.addEventListener("pointerup", (event) => {
+        if (!pointerStart) return;
+        finishSwipe(event.clientX - pointerStart.x, event.clientY - pointerStart.y);
+        pointerStart = null;
+      });
+      stack.addEventListener("pointercancel", () => { pointerStart = null; });
+    } else if (stack) {
+      let touchStart = null;
+      stack.addEventListener("touchstart", (event) => {
+        const touch = event.changedTouches[0];
+        if (touch) touchStart = { x: touch.clientX, y: touch.clientY };
+      }, { passive: true });
+      stack.addEventListener("touchend", (event) => {
+        const touch = event.changedTouches[0];
+        if (!touch || !touchStart) return;
+        finishSwipe(touch.clientX - touchStart.x, touch.clientY - touchStart.y);
+        touchStart = null;
+      }, { passive: true });
+      stack.addEventListener("touchcancel", () => { touchStart = null; });
+    }
   }
 
   document.querySelectorAll(".lms-addon-button").forEach((button) => {
