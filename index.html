@@ -3,449 +3,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Кастомная LMS под ваш проект — ТЕХЦЕХ</title>
-  <meta name="description" content="Разработка кастомных образовательных платформ: сайт продаж, личный кабинет, защита контента, автоматическая выдача доступов. Гибче конструкторов и выгоднее на дистанции.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="theme-color" content="#f5f7f9">
+  <title>Закрытая платформа для запусков и сообществ — ТЕХЦЕХ</title>
+  <meta name="description" content="Создаём индивидуальные закрытые платформы для блогеров, продюсерских команд и сообществ: личный кабинет, материалы, админ-панель, защита медиа и соблюдение требований 152-ФЗ.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Закрытая платформа для запусков и сообществ — ТЕХЦЕХ">
+  <meta property="og:description" content="Индивидуальная платформа для вашего проекта. Материалы не окажутся на форумах сливов.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/texcex-refresh.css">
 </head>
 <body>
-
-  <!-- ============ HEADER ============ -->
-  <header class="site-header">
-    <div class="container header__inner">
-      <a href="#" class="header__logo">ТЕХЦЕХ</a>
-
-      <nav class="header__nav">
-        <a href="#what-i-do">Что я делаю</a>
-        <a href="#comparison">Сравнение</a>
-        <a href="#case">Кейс</a>
-        <a href="#process">Как проходит работа</a>
-      </nav>
-
-      <div class="header__controls">
-        <!-- переключатель языка -->
-        <a href="index.en.html" class="header__lang" aria-label="Switch to English">EN</a>
-        <!-- переключатель темы -->
-        <button type="button" class="header__theme" id="themeToggle" aria-label="Переключить тему">
-          <span class="theme-icon theme-icon--light">☀</span>
-          <span class="theme-icon theme-icon--dark">☾</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-
-        <!-- ============ 1. HERO ============ -->
-    <section class="hero" id="hero">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <span class="hero__eyebrow">Кастомная разработка LMS</span>
-          <h1 class="hero__title">
-            Кастомная LMS под ваш проект — гибче конструкторов и выгоднее на дистанции
-          </h1>
-          <p class="hero__subtitle">
-            Разрабатываю образовательные платформы с нуля: сайт продаж, личный кабинет,
-            защита контента, автоматическая выдача доступов. Не конструктор курсов —
-            система, которая работает на вашу бизнес-логику, а не наоборот.
-          </p>
-          <div class="hero__actions">
-            <a href="#contact" class="btn btn--cta btn--lg">Обсудить проект</a>
-            <a href="#case" class="btn btn--secondary btn--lg">Смотреть кейс</a>
-          </div>
-          <ul class="hero__points">
-            <li>Production-опыт, не прототип</li>
-            <li>Платежи с резервированием</li>
-            <li>Защита видео и материалов</li>
-          </ul>
-        </div>
-
-        <div class="hero__visual" aria-hidden="true">
-          <div class="hero__mockup">
-            <div class="hero__mockup-bar">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="hero__mockup-body">
-              <div class="hero__mockup-line hero__mockup-line--wide"></div>
-              <div class="hero__mockup-line"></div>
-              <div class="hero__mockup-line hero__mockup-line--short"></div>
-              <div class="hero__mockup-cards">
-                <div class="hero__mockup-card"></div>
-                <div class="hero__mockup-card"></div>
-                <div class="hero__mockup-card"></div>
-              </div>
-            </div>
-          </div>
+  <div class="lms-full-page">
+    <div class="lms-scroll-progress" aria-hidden="true"></div>
+    <header class="current-header">
+      <div class="current-container current-header__inner">
+        <a class="current-logo" href="#hero" aria-label="ТЕХЦЕХ — на главную">
+          <img src="images/texcex-logo-header.png" alt="ТЕХЦЕХ">
+        </a>
+        <nav class="current-nav" aria-label="Основная навигация">
+          <a href="#approach">Что мы делаем</a>
+          <a href="#platform-preview">Пример платформы</a>
+          <a href="#process">Как работаем</a>
+        </nav>
+        <div class="current-controls">
+          <a class="current-lang" href="index.en.html" lang="en" aria-label="English version">EN</a>
+          <button class="current-theme" id="themeToggle" type="button" aria-label="Включить тёмную тему" title="Тема оформления">
+            <span class="current-theme__sun" aria-hidden="true">☼</span>
+            <span class="current-theme__moon" aria-hidden="true">☾</span>
+          </button>
+          <a class="current-header-cta" href="#contact">Обсудить проект</a>
         </div>
       </div>
-    </section>
+    </header>
 
-        <!-- ============ 2. ПРОБЛЕМА ============ -->
-    <section class="problem" id="problem">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">Почему конструкторы курсов не всегда работают</h2>
-          <p class="section-lead">
-            GetCourse, Tilda и похожие платформы решают задачу «быстро запустить курсы».
-            Но у них есть цена, которую вы платите постоянно.
-          </p>
-        </div>
-
-        <div class="problem__grid">
-          <article class="problem__card">
-            <div class="problem__icon" aria-hidden="true">%</div>
-            <h3>Комиссия с каждой продажи</h3>
-            <p>Чем успешнее проект, тем больше вы отдаёте платформе — за то, что уже могли бы владеть сами.</p>
-          </article>
-
-          <article class="problem__card">
-            <div class="problem__icon" aria-hidden="true">⚙</div>
-            <h3>Ограниченная логика</h3>
-            <p>Уникальные тарифы, нестандартные сценарии доступа, специфические интеграции — всё упирается в «а так нельзя».</p>
-          </article>
-
-          <article class="problem__card">
-            <div class="problem__icon" aria-hidden="true">🔒</div>
-            <h3>Слабая защита контента</h3>
-            <p>Видео и материалы утекают, а вы не можете это остановить.</p>
-          </article>
-
-          <article class="problem__card">
-            <div class="problem__icon" aria-hidden="true">⛓</div>
-            <h3>Зависимость</h3>
-            <p>Ваши клиенты, платежи и контент живут в чужой экосистеме. Условия меняются — вы подстраиваетесь.</p>
-          </article>
-        </div>
-
-        <p class="problem__closing">
-          Если ваш проект перерос конструктор — пора владеть платформой, а не арендовать её.
-        </p>
-      </div>
-    </section>
-
-        <!-- ============ 3. ЧТО Я ДЕЛАЮ ============ -->
-    <section class="services" id="what-i-do">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">Платформа, которая закрывает весь путь клиента</h2>
-          <p class="section-lead">
-            От первой продажи до повторных покупок — всё в одной системе, которая принадлежит вам.
-          </p>
-        </div>
-
-        <div class="services__grid">
-          <article class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
+    <main>
+      <section class="current-hero" id="hero" aria-labelledby="hero-title">
+        <div class="current-container current-hero__inner">
+          <div class="current-copy" id="approach">
+            <span class="current-eyebrow">Индивидуальные платформы для запусков</span>
+            <h1 class="current-title" id="hero-title">Ваши материалы <span class="current-title__accent">не окажутся</span> на форумах сливов.</h1>
+            <p class="current-subtitle">Создаём закрытые платформы для блогеров, продюсерских команд и сообществ. Участники получают материалы внутри проекта, а защиту мы берём на себя.</p>
+            <p class="current-detail">Структуру, личные кабинеты и админ-панель создаём под конкретный проект — не по готовому шаблону.</p>
+            <div class="current-actions">
+              <a class="current-button current-button--cta" href="#contact">Обсудить проект</a>
+              <a class="current-button current-button--secondary" href="#platform-preview">Посмотреть интерфейс</a>
             </div>
-            <h3>Сайт продаж + оплата</h3>
-            <p>Страницы тарифов, приём платежей, автоматическая выдача доступа сразу после оплаты. Подключу одну или две кассы — чтобы продажи не останавливались, если что-то пойдёт не так.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-            </div>
-            <h3>Личный кабинет участника</h3>
-            <p>Клиент видит свой тариф, срок доступа и каталог материалов: видео, PDF, тексты. Удобно на компьютере и на телефоне.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-            </div>
-            <h3>Защита контента</h3>
-            <p>Видео защищено от скачивания и привязано к сессии пользователя. Материалы нельзя просто «унести» и перепродать.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
-            </div>
-            <h3>Автоматизация доступов</h3>
-            <p>Оплата подтверждена — доступ выдан. Без ручной работы и без риска, что клиент заплатил, но остался ни с чем.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M9 9v11"/></svg>
-            </div>
-            <h3>Админ-панель</h3>
-            <p>Платежи, статусы пользователей, выдача и отзыв доступов, ключевые метрики — всё в одном месте.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
-            </div>
-            <h3>Сопровождение после запуска</h3>
-            <p>Платформа не «сдаётся и забывается»: слежу за стабильностью, правлю проблемы, развиваю по мере роста проекта.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-        <!-- ============ 4. СРАВНЕНИЕ / ЭКОНОМИКА ============ -->
-    <section class="comparison" id="comparison">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">Экономика решения</h2>
-          <p class="section-lead">
-            Конструктор дешёвый на старте — и дорогой на дистанции.
-            Кастомная LMS — это разовая инвестиция в актив, который принадлежит вам.
-          </p>
-        </div>
-
-        <div class="comparison__table-wrap">
-          <table class="comparison__table">
-            <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col">Конструктор</th>
-                <th scope="col" class="comparison__col--custom">Кастомная LMS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Комиссия с продаж</th>
-                <td>Есть, постоянно</td>
-                <td class="comparison__col--custom">Нет — платформа ваша</td>
-              </tr>
-              <tr>
-                <th scope="row">Логика и тарифы</th>
-                <td>По шаблону платформы</td>
-                <td class="comparison__col--custom">Под ваш проект</td>
-              </tr>
-              <tr>
-                <th scope="row">Защита контента</th>
-                <td>Базовая</td>
-                <td class="comparison__col--custom">Полноценная</td>
-              </tr>
-              <tr>
-                <th scope="row">Владение</th>
-                <td>Аренда</td>
-                <td class="comparison__col--custom">Актив на вашем сервере</td>
-              </tr>
-              <tr>
-                <th scope="row">Рост проекта</th>
-                <td>Растёт и стоимость</td>
-                <td class="comparison__col--custom">Растёт только ваша выручка</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="comparison__note">
-          <p>
-            Готовая кастомная LMS у российских студий стоит от 600 000 до 1 500 000 ₽
-            (по международным меркам — от $40 000). Это звучит как крупная сумма — пока
-            не сравнить её с тем, сколько проект отдаёт конструктору за годы работы.
-            На горизонте 2–3 лет кастомная платформа окупается и дальше работает только на вас.
-          </p>
-        </div>
-      </div>
-    </section>
-
-        <!-- ============ 5. КЕЙС ============ -->
-    <section class="case" id="case">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">Как это работает в production</h2>
-          <p class="section-lead">
-            «Фабрика заготовок» — кулинарный клуб, для которого я разработал связку
-            «сайт продаж + закрытая образовательная платформа». Проект не в прототипе —
-            он работает с реальными людьми и реальными платежами.
-          </p>
-        </div>
-
-        <div class="case__layout">
-          <div class="case__info">
-            <h3 class="case__subtitle">Что реализовано</h3>
-            <ul class="case__list">
-              <li>Два тарифа: базовый ведёт в закрытый Telegram-клуб, премиальный — на веб-платформу.</li>
-              <li>Приём платежей через основной и резервный шлюз — если один недоступен, продажи продолжаются.</li>
-              <li>Автоматическая выдача доступа после оплаты, с защитой от повторной обработки платежей.</li>
-              <li>Личный кабинет с каталогом материалов: видео, PDF-сборники, тексты.</li>
-              <li>Защищённое видео, привязанное к сессии пользователя.</li>
-              <li>Админ-панель: платежи, доступы, метрики.</li>
+            <ul class="current-points" aria-label="Важные условия">
+              <li>Запуск от двух недель после брифа</li>
+              <li>Соблюдаем требования 152-ФЗ</li>
+              <li>После запуска платформа ваша</li>
             </ul>
-
-            <div class="case__tags">
-              <span class="tag">Production</span>
-              <span class="tag">Платежи с резервированием</span>
-              <span class="tag">Защита видео</span>
-              <span class="tag">Роли и доступы</span>
-            </div>
           </div>
 
-          <div class="case__gallery">
-            <!-- плейсхолдеры: заменить на реальные скриншоты -->
-            <figure class="case__shot case__shot--wide">
-              <div class="case__shot-placeholder">
-                <span>Скриншот: главная страница</span>
+          <figure class="current-visual" id="platform-preview">
+            <div class="current-visual-heading">
+              <span>Кейс и админ-панель</span>
+              <span class="current-project-count">3 реальных экрана кейса</span>
+            </div>
+            <div class="ac-carousel" id="caseCarousel" role="region" aria-roledescription="карусель" aria-label="Реальные экраны платформы из кейса Фабрика заготовок" tabindex="0">
+              <div class="ac-deck">
+                <div class="ac-stack">
+                  <div class="ac-card ac-peek" aria-hidden="true"><img id="carouselPeek" src="images/admin-payments-redacted.png" alt=""></div>
+                  <div class="ac-card ac-active" id="carouselActive" role="group" aria-roledescription="слайд" aria-label="1 из 3: Библиотека материалов">
+                    <img id="carouselImage" src="images/fabrika-library.png" alt="Библиотека материалов с видео и файлами для участников клуба">
+                  </div>
+                </div>
               </div>
-              <figcaption>Сайт продаж</figcaption>
-            </figure>
+              <div class="ac-caption">
+                <div class="ac-caption-copy" aria-live="polite" aria-atomic="true">
+                  <strong id="carouselTitle">Библиотека материалов</strong>
+                  <p id="carouselDescription">Реальный экран участника из кейса «Фабрика заготовок».</p>
+                </div>
+                <div class="ac-controls">
+                  <span class="ac-count" id="carouselCount">01 / 03</span>
+                  <button class="ac-arrow" type="button" data-carousel-prev aria-label="Предыдущий экран">←</button>
+                  <button class="ac-arrow" type="button" data-carousel-next aria-label="Следующий экран">→</button>
+                </div>
+              </div>
+              <div class="ac-dots" role="group" aria-label="Выбрать экран">
+                <button class="ac-dot" type="button" data-carousel-go="0" aria-label="Показать экран: Библиотека материалов" aria-pressed="true"></button>
+                <button class="ac-dot" type="button" data-carousel-go="1" aria-label="Показать экран: Поддержка оплат" aria-pressed="false"></button>
+                <button class="ac-dot" type="button" data-carousel-go="2" aria-label="Показать экран: Проверка доступа" aria-pressed="false"></button>
+              </div>
+            </div>
+            <figcaption class="current-case-note">Библиотека, поддержка оплат и проверка доступа. Данные клиентов и рабочие показатели скрыты на снимках.</figcaption>
+          </figure>
+        </div>
+      </section>
 
-            <figure class="case__shot">
-              <div class="case__shot-placeholder">
-                <span>Скриншот: личный кабинет</span>
-              </div>
-              <figcaption>Кабинет участника</figcaption>
-            </figure>
-
-            <figure class="case__shot">
-              <div class="case__shot-placeholder">
-                <span>Скриншот: админ-панель</span>
-              </div>
-              <figcaption>Админ-панель</figcaption>
-            </figure>
-
-            <figure class="case__shot case__shot--wide">
-              <div class="case__shot-placeholder">
-                <span>Скриншот: мобильная версия</span>
-              </div>
-              <figcaption>Мобильная версия</figcaption>
-            </figure>
+      <section class="lms-section lms-problems" aria-labelledby="problems-title">
+        <div class="lms-container">
+          <div class="lms-problem-intro">
+            <div class="lms-section-head" data-reveal>
+              <p class="lms-kicker">Если проекту тесно в типовых решениях</p>
+              <h2 class="lms-heading" id="problems-title">Не подгоняем ваш запуск под чужой сценарий</h2>
+              <p class="lms-lead">Сначала разбираемся, как устроен ваш проект. Затем собираем закрытую платформу под его задачи.</p>
+              <a class="lms-ink-link" href="#core">Что входит в основу <span aria-hidden="true">↓</span></a>
+            </div>
+            <p class="lms-problem-aside" data-reveal>Запуск, онлайн-продукт и закрытое сообщество могут работать по-разному. Платформа подстраивается под процесс — не наоборот.</p>
+          </div>
+          <div class="lms-problem-grid">
+            <article class="lms-problem-card" data-reveal>
+              <div class="lms-problem-top"><span class="lms-problem-number">01 / ВАША ЗАДАЧА</span><span class="lms-problem-icon" aria-hidden="true">↻</span></div>
+              <h3>Расходы повторяются</h3>
+              <p>За конструктор приходится платить регулярно. По мере развития проекта важно понимать, как меняются тарифы и условия.</p>
+            </article>
+            <article class="lms-problem-card" data-reveal>
+              <div class="lms-problem-top"><span class="lms-problem-number">02 / ВАША ЗАДАЧА</span><span class="lms-problem-icon" aria-hidden="true">↔</span></div>
+              <h3>Сценарий приходится подстраивать</h3>
+              <p>Не каждый запуск устроен одинаково. Когда процесс не помещается в готовую схему, появляются лишние шаги.</p>
+            </article>
+            <article class="lms-problem-card" data-reveal>
+              <div class="lms-problem-top"><span class="lms-problem-number">03 / ВАША ЗАДАЧА</span><span class="lms-problem-icon" aria-hidden="true">•••</span></div>
+              <h3>Админ-рутина забирает время</h3>
+              <p>Доступы, размещение материалов и текущие вопросы отвлекают команду от запуска и работы с участниками.</p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-        <!-- ============ 6. ПРОЦЕСС ============ -->
-    <section class="process" id="process">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">От идеи до запуска</h2>
-          <p class="section-lead">
-            Понятный процесс без сюрпризов — вы знаете, что происходит на каждом этапе.
-          </p>
-        </div>
-
-        <ol class="process__steps">
-          <li class="process__step">
-            <span class="process__num">01</span>
-            <div class="process__body">
-              <h3>Обсуждаем проект</h3>
-              <p>Тарифы, аудитория, контент, платежи — что должно быть и как это работает в вашей модели.</p>
-            </div>
-          </li>
-          <li class="process__step">
-            <span class="process__num">02</span>
-            <div class="process__body">
-              <h3>Проектирую</h3>
-              <p>Структура страниц, сценарии доступа, схема оплаты.</p>
-            </div>
-          </li>
-          <li class="process__step">
-            <span class="process__num">03</span>
-            <div class="process__body">
-              <h3>Разрабатываю</h3>
-              <p>Сайт продаж, кабинет, админка, интеграции.</p>
-            </div>
-          </li>
-          <li class="process__step">
-            <span class="process__num">04</span>
-            <div class="process__body">
-              <h3>Запускаем</h3>
-              <p>Тестируем платежи и доступы, выводим в production.</p>
-            </div>
-          </li>
-          <li class="process__step">
-            <span class="process__num">05</span>
-            <div class="process__body">
-              <h3>Сопровождаю</h3>
-              <p>Платформа живёт и развивается вместе с проектом.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-        <!-- ============ 7. ГРАНИЦЫ ============ -->
-    <section class="boundaries" id="boundaries">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">Что сюда не входит</h2>
-          <p class="section-lead">
-            Чтобы не было сюрпризов — это не конструктор курсов (пока что).
-          </p>
-        </div>
-
-        <div class="boundaries__box">
-          <ul class="boundaries__list">
-            <li>Нет редактора курсов «из коробки»</li>
-            <li>Нет встроенных тестов и экзаменов</li>
-            <li>Нет сертификатов о прохождении</li>
-            <li>Нет сложного трекинга прогресса</li>
-          </ul>
-          <p class="boundaries__note">
-            Если такие функции нужны — обсуждаем отдельно.
-            Зато всё, что входит, сделано под ваш проект и принадлежит вам.
-          </p>
-        </div>
-      </div>
-    </section>
-
-        <!-- ============ 8. CTA + ФОРМА ============ -->
-    <section class="cta" id="contact">
-      <div class="container">
-        <div class="cta__box">
-          <div class="cta__content">
-            <h2 class="cta__title">Обсудим ваш проект?</h2>
-            <p class="cta__text">
-              Расскажите пару слов о задаче — свяжусь с вами, чтобы обсудить детали,
-              сроки и стоимость. Без обязательств.
-            </p>
+      <section class="lms-section lms-tailored" id="core" aria-labelledby="core-title">
+        <div class="lms-container">
+          <div class="lms-tailored-head" data-reveal>
+            <div><p class="lms-kicker">Основа проекта</p><h2 class="lms-heading" id="core-title">Платформа собирается вокруг вашего проекта</h2></div>
+            <p class="lms-lead">Начинаем с брифа: кто ваши участники, как устроен запуск и что должно происходить внутри платформы.</p>
           </div>
-
-          <form class="cta__form" id="contactForm" novalidate>
-            <div class="form-field">
-              <label for="name">Имя</label>
-              <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required autocomplete="name">
+          <div class="lms-core-showcase">
+            <div class="lms-orbit" data-reveal role="img" aria-label="Схема платформы: проект, участники, материалы и команда">
+              <div class="lms-orbit-ring"></div><div class="lms-orbit-ring lms-orbit-ring--inner"></div>
+              <div class="lms-orbit-center"><span>Под ваш проект</span><strong>Закрытая платформа</strong></div>
+              <div class="lms-orbit-chip lms-orbit-chip--one"><span aria-hidden="true">○</span> Участники</div>
+              <div class="lms-orbit-chip lms-orbit-chip--two"><span aria-hidden="true">▤</span> Материалы</div>
+              <div class="lms-orbit-chip lms-orbit-chip--three"><span aria-hidden="true">▣</span> Команда</div>
             </div>
-
-            <div class="form-field">
-              <label for="contact">Контакт для связи</label>
-              <input type="text" id="contact" name="contact" placeholder="Telegram, телефон или email" required autocomplete="off">
+            <div class="lms-core-list">
+              <article class="lms-core-card" data-reveal><span class="lms-core-card-icon" aria-hidden="true">○</span><h3>Личный кабинет</h3><p>Участники входят в закрытую платформу со своим доступом.</p></article>
+              <article class="lms-core-card" data-reveal><span class="lms-core-card-icon" aria-hidden="true">▤</span><h3>Материалы проекта</h3><p>Размещаем стартовый контент в структуре вашего проекта.</p></article>
+              <article class="lms-core-card" data-reveal><span class="lms-core-card-icon" aria-hidden="true">⌑</span><h3>Управление доступами</h3><p>Мы настраиваем доступ участников и помогаем следить за ним.</p></article>
+              <article class="lms-core-card" data-reveal><span class="lms-core-card-icon" aria-hidden="true">▣</span><h3>Базовая админ-панель</h3><p>Команда видит основные рабочие разделы и состояние платформы.</p></article>
             </div>
-
-            <div class="form-field">
-              <label for="message">Кратко о проекте</label>
-              <textarea id="message" name="message" placeholder="Что за проект, какая задача, что уже есть" rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn--cta btn--lg cta__submit">Отправить</button>
-
-            <p class="cta__form-note" id="formNote" role="status" aria-live="polite"></p>
-          </form>
+          </div>
+          <aside class="lms-base-note" data-reveal><strong>Материалы размещаем мы</strong><span>Самостоятельная загрузка командой не входит в базовый состав. Если нужна автономность, отдельно спроектируем и добавим её.</span></aside>
         </div>
+      </section>
 
-        <p class="cta__signature">ТЕХЦЕХ</p>
-      </div>
-    </section>
+      <section class="lms-section lms-options" id="addons" aria-labelledby="addons-title">
+        <div class="lms-container">
+          <div class="lms-options-head">
+            <div class="lms-section-head" data-reveal><p class="lms-kicker">По запросу</p><h2 class="lms-heading" id="addons-title">Дополняем платформу под ваш процесс</h2><p class="lms-lead">Фиксируем состав заранее. Ничего лишнего — только то, что действительно понадобится проекту.</p></div>
+            <div class="lms-addon-count" data-reveal aria-label="Возможности согласуются отдельно"><strong>+</strong><span>по задаче</span></div>
+          </div>
+          <div class="lms-addon-grid">
+            <article class="lms-addon" data-reveal><button class="lms-addon-button" type="button" aria-expanded="false" aria-controls="addon-materials"><span class="lms-addon-number">ВОЗМОЖНОСТЬ 01</span><span class="lms-addon-arrow" aria-hidden="true">↗</span><span class="lms-addon-title">Самостоятельно добавлять материалы</span><span class="lms-addon-summary">Команда сможет обновлять контент без отдельного обращения.</span><span class="lms-addon-state">Добавляется отдельно</span></button><div class="lms-addon-extra" id="addon-materials" hidden><p>Если материалы часто дополняются, отдельно спроектируем понятную навигацию в админ-панели и добавим самостоятельную загрузку.</p></div></article>
+            <article class="lms-addon" data-reveal><button class="lms-addon-button" type="button" aria-expanded="false" aria-controls="addon-access"><span class="lms-addon-number">ВОЗМОЖНОСТЬ 02</span><span class="lms-addon-arrow" aria-hidden="true">↗</span><span class="lms-addon-title">Управлять доступами вручную</span><span class="lms-addon-summary">Передать часть повседневных действий команде.</span><span class="lms-addon-state">Согласуем в брифе</span></button><div class="lms-addon-extra" id="addon-access" hidden><p>Определим, кто в команде и какие действия сможет выполнять — например, выдавать или менять доступ участника.</p></div></article>
+            <article class="lms-addon" data-reveal><button class="lms-addon-button" type="button" aria-expanded="false" aria-controls="addon-analytics"><span class="lms-addon-number">ВОЗМОЖНОСТЬ 03</span><span class="lms-addon-arrow" aria-hidden="true">↗</span><span class="lms-addon-title">Смотреть показатели проекта</span><span class="lms-addon-summary">Собрать нужные метрики в удобном виде.</span><span class="lms-addon-state">По запросу</span></button><div class="lms-addon-extra" id="addon-analytics" hidden><p>Состав показателей и вид дашборда подбираются под задачи конкретного запуска или сообщества.</p></div></article>
+            <article class="lms-addon" data-reveal><button class="lms-addon-button" type="button" aria-expanded="false" aria-controls="addon-chat"><span class="lms-addon-number">ВОЗМОЖНОСТЬ 04</span><span class="lms-addon-arrow" aria-hidden="true">↗</span><span class="lms-addon-title">Общаться внутри платформы</span><span class="lms-addon-summary">Чат для участников или комната для вебинаров.</span><span class="lms-addon-state">По запросу</span></button><div class="lms-addon-extra" id="addon-chat" hidden><p>Выберем формат общения, который впишется в путь участников и работу вашей команды.</p></div></article>
+            <article class="lms-addon" data-reveal><button class="lms-addon-button" type="button" aria-expanded="false" aria-controls="addon-homework"><span class="lms-addon-number">ВОЗМОЖНОСТЬ 05</span><span class="lms-addon-arrow" aria-hidden="true">↗</span><span class="lms-addon-title">Принимать домашние задания</span><span class="lms-addon-summary">Сдача работ и обратная связь куратора.</span><span class="lms-addon-state">По запросу</span></button><div class="lms-addon-extra" id="addon-homework" hidden><p>Согласуем, как участник отправляет работу, а куратор проверяет её и оставляет обратную связь.</p></div></article>
+            <article class="lms-addon" data-reveal><button class="lms-addon-button" type="button" aria-expanded="false" aria-controls="addon-support"><span class="lms-addon-number">ВОЗМОЖНОСТЬ 06</span><span class="lms-addon-arrow" aria-hidden="true">↗</span><span class="lms-addon-title">Оставить администрирование нам</span><span class="lms-addon-summary">Продолжить работу с платформой после запуска.</span><span class="lms-addon-state">Отдельная услуга</span></button><div class="lms-addon-extra" id="addon-support" hidden><p>После передачи можем по договорённости размещать новые материалы и помогать команде с текущими задачами.</p></div></article>
+          </div>
+        </div>
+      </section>
 
-  </main>
+      <section class="lms-section lms-process" id="process" aria-labelledby="process-title">
+        <div class="lms-container">
+          <div class="lms-process-head"><div class="lms-section-head" data-reveal><p class="lms-kicker">Понятный порядок работы</p><h2 class="lms-heading" id="process-title">От брифа до запуска — вместе</h2></div><p class="lms-lead" data-reveal>На каждом этапе понятно, что уже готово, что нужно от вас и что будет дальше.</p></div>
+          <div class="lms-process-tabs" role="group" aria-label="Этапы создания платформы" data-reveal>
+            <span class="lms-process-fill" aria-hidden="true" style="transform:scaleX(.2)"></span>
+            <button class="lms-process-tab" type="button" data-step="0" aria-pressed="true"><span class="lms-process-tab-dot">01</span><span class="lms-process-tab-label">Задача и аудитория</span></button>
+            <button class="lms-process-tab" type="button" data-step="1" aria-pressed="false"><span class="lms-process-tab-dot">02</span><span class="lms-process-tab-label">Структура и инфраструктура</span></button>
+            <button class="lms-process-tab" type="button" data-step="2" aria-pressed="false"><span class="lms-process-tab-dot">03</span><span class="lms-process-tab-label">Материалы и функции</span></button>
+            <button class="lms-process-tab" type="button" data-step="3" aria-pressed="false"><span class="lms-process-tab-dot">04</span><span class="lms-process-tab-label">Проверка и доработка</span></button>
+            <button class="lms-process-tab" type="button" data-step="4" aria-pressed="false"><span class="lms-process-tab-dot">05</span><span class="lms-process-tab-label">Обучение и запуск</span></button>
+          </div>
+          <div class="lms-process-panel is-visible" aria-live="polite" data-reveal>
+            <span class="lms-process-panel-number" id="processNumber">01</span>
+            <div class="lms-process-panel-copy"><span id="processIndex">Этап 1 из 5</span><h3 id="processTitle">Бриф</h3><p id="processBody">Разбираем продукт, участников, материалы и сценарий запуска. Это точка, от которой считаются сроки.</p></div>
+            <span class="lms-process-chip" id="processChip">Старт проекта</span>
+          </div>
+          <p class="lms-timing" data-reveal><strong>Срок запуска — от двух недель после брифа.</strong> Точный график согласуем после проектирования.</p>
+        </div>
+      </section>
 
-    <!-- ============ FOOTER ============ -->
-  <footer class="site-footer">
-    <div class="container footer__inner">
-      <div class="footer__brand-col">
-        <span class="footer__brand">ТЕХЦЕХ</span>
-        <span class="footer__tagline">Кастомные LMS под ваш проект</span>
-      </div>
-      <nav class="footer__nav" aria-label="Футер">
-        <a href="#what-i-do">Что я делаю</a>
-        <a href="#comparison">Сравнение</a>
-        <a href="#case">Кейс</a>
-        <a href="#contact">Обсудить проект</a>
-      </nav>
-      <span class="footer__copy">© <span id="year"></span></span>
-    </div>
-  </footer>
+      <section class="lms-section lms-safety" aria-labelledby="safety-title">
+        <div class="lms-container lms-safety-layout">
+          <div class="lms-safety-art" data-reveal role="img" aria-label="Защита доступа, медиа и персональных данных">
+            <div class="lms-safety-orbit"></div>
+            <div class="lms-safety-seal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.5 8.3-8 10-4.5-1.7-8-5-8-10V6z"></path><path d="m8.5 12 2.2 2.2 4.8-5"></path></svg><strong>Закрыто</strong><span>Под контролем</span></div>
+            <span class="lms-safety-tag lms-safety-tag--one">Доступ участников</span><span class="lms-safety-tag lms-safety-tag--two">Защита медиа</span><span class="lms-safety-tag lms-safety-tag--three">152-ФЗ</span>
+          </div>
+          <div class="lms-safety-copy" data-reveal>
+            <p class="lms-kicker">Спокойствие для команды и участников</p>
+            <h2 class="lms-heading" id="safety-title">Защиту и надёжность берём на себя</h2>
+            <p class="lms-lead">Продумываем закрытый доступ, защиту медиа и размещение материалов под ваш проект. Не ставим всю платформу в зависимость от одного сервиса.</p>
+            <div class="lms-safety-points">
+              <div class="lms-safety-point"><span class="lms-safety-point-number">01</span><p><strong>Материалы — внутри проекта.</strong> Участники получают доступ через закрытую платформу.</p></div>
+              <div class="lms-safety-point"><span class="lms-safety-point-number">02</span><p><strong>Данные — по правилам.</strong> Соблюдаем требования 152-ФЗ при обработке персональных данных.</p></div>
+              <div class="lms-safety-point"><span class="lms-safety-point-number">03</span><p><strong>Платформа остаётся у вас.</strong> После приёмки передаём её команде или продолжаем администрирование по договорённости.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <script src="js/script.js"></script>
+      <section class="lms-section lms-case" aria-labelledby="case-title">
+        <div class="lms-container">
+          <div class="lms-case-card" data-reveal>
+            <div class="lms-case-copy">
+              <span class="lms-case-stamp">Реальный пример работы</span>
+              <h2 class="lms-case-title" id="case-title">«Фабрика заготовок»</h2>
+              <p>Закрытая платформа клуба: участники получают материалы в личном кабинете, команда работает с доступами и поддержкой оплат. Скриншоты в карусели выше — реальные экраны кейса, данные клиентов и рабочие показатели скрыты.</p>
+              <div class="lms-case-tags" aria-label="Что показано в кейсе"><span>Личный кабинет</span><span>Материалы</span><span>Поддержка оплат</span></div>
+              <p class="lms-case-caption">Кейс показывает один проект. Состав и устройство новой платформы определяются отдельно по вашему брифу.</p>
+            </div>
+            <aside class="lms-case-side"><span>Кейс в работе</span><strong>Один проект. Свои правила.</strong><p>Посмотрите публичное демо, чтобы увидеть платформу в действии.</p><a class="lms-case-link" href="https://platform-clubfabrika3.ru/" target="_blank" rel="noopener noreferrer">Открыть демо <span aria-hidden="true">↗</span></a></aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="lms-section lms-cost" id="contact" aria-labelledby="cost-title">
+        <div class="lms-container">
+          <div class="lms-cost-panel" data-reveal>
+            <div class="lms-cost-main"><p class="lms-kicker">Стоимость проекта</p><p class="lms-price-label">Ориентир для базовой интеграции</p><h2 class="lms-price" id="cost-title">от 70 000 <span>₽</span></h2><p class="lms-price-note">Это предварительный ориентир. Итоговый состав и стоимость фиксируем после брифа — они зависят от задач и выбранных возможностей. После передачи нет регулярной оплаты за платформу — остаются только расходы на инфраструктуру.</p></div>
+            <div class="lms-cost-details">
+              <div class="lms-cost-detail"><span class="lms-cost-detail-mark" aria-hidden="true">✓</span><div><strong>Разовый платёж</strong><p>За согласованную базовую интеграцию платформы.</p></div></div>
+              <div class="lms-cost-detail"><span class="lms-cost-detail-mark" aria-hidden="true">↗</span><div><strong>Неделя сопровождения</strong><p>Обучение команды и поддержка после запуска включены.</p></div></div>
+              <div class="lms-cost-detail"><span class="lms-cost-detail-mark" aria-hidden="true">◷</span><div><strong>От двух недель</strong><p>Срок запуска отсчитываем после брифа.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lms-bottom-cta" aria-label="Обсудить проект">
+        <div class="lms-container lms-bottom-inner">
+          <div data-reveal><p>ТЕХЦЕХ · Индивидуальные платформы для запусков</p><h2>Расскажите, как устроен ваш проект</h2></div>
+          <a class="lms-bottom-link" href="#contact" data-reveal>Обсудить проект <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+    <footer class="lms-footer"><div class="lms-container lms-footer-inner"><span>ТЕХЦЕХ · Мини-LMS под конкретный проект</span><span>Состав и условия согласуем после брифа · © <span id="year"></span></span></div></footer>
+  </div>
+  <script src="js/script.js" defer></script>
 </body>
 </html>

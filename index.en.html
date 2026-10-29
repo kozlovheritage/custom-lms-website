@@ -3,450 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom LMS for Your Project — TEKHCEKH</title>
-  <meta name="description" content="Custom learning platform development: sales site, member portal, content protection, automatic access delivery. More flexible than course builders, cheaper in the long run.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="theme-color" content="#f5f7f9">
+  <title>Closed platforms for launches and communities — TEKHCEKH</title>
+  <meta name="description" content="We build individual closed platforms for creators, producer teams, and communities: member accounts, content, an admin panel, media protection, and compliance with Russian Federal Law 152-FZ.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Closed platforms for launches and communities — TEKHCEKH">
+  <meta property="og:description" content="An individual platform built around your project. Your materials won't show up on leak forums.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/texcex-refresh.css">
 </head>
 <body>
-
-  <!-- ============ HEADER ============ -->
-  <header class="site-header">
-    <div class="container header__inner">
-      <a href="#" class="header__logo">TEKHCEKH</a>
-
-      <nav class="header__nav">
-        <a href="#what-i-do">What I Do</a>
-        <a href="#comparison">Comparison</a>
-        <a href="#case">Case Study</a>
-        <a href="#process">How It Works</a>
-      </nav>
-
-      <div class="header__controls">
-        <!-- language switcher -->
-        <a href="index.html" class="header__lang" aria-label="Переключить на русский">RU</a>
-        <!-- theme switcher -->
-        <button type="button" class="header__theme" id="themeToggle" aria-label="Toggle theme">
-          <span class="theme-icon theme-icon--light">☀</span>
-          <span class="theme-icon theme-icon--dark">☾</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-
-        <!-- ============ 1. HERO ============ -->
-    <section class="hero" id="hero">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <span class="hero__eyebrow">Custom LMS development</span>
-          <h1 class="hero__title">
-            A custom LMS for your project — more flexible than course builders,
-            cheaper in the long run
-          </h1>
-          <p class="hero__subtitle">
-            I build learning platforms from scratch: a sales site, a member portal,
-            content protection, and automatic access delivery. Not a course builder —
-            a system that runs on your business logic, not the other way around.
-          </p>
-          <div class="hero__actions">
-            <a href="#contact" class="btn btn--cta btn--lg">Discuss your project</a>
-            <a href="#case" class="btn btn--secondary btn--lg">View case study</a>
-          </div>
-          <ul class="hero__points">
-            <li>Production experience, not a prototype</li>
-            <li>Payments with failover</li>
-            <li>Video and content protection</li>
-          </ul>
-        </div>
-
-        <div class="hero__visual" aria-hidden="true">
-          <div class="hero__mockup">
-            <div class="hero__mockup-bar">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="hero__mockup-body">
-              <div class="hero__mockup-line hero__mockup-line--wide"></div>
-              <div class="hero__mockup-line"></div>
-              <div class="hero__mockup-line hero__mockup-line--short"></div>
-              <div class="hero__mockup-cards">
-                <div class="hero__mockup-card"></div>
-                <div class="hero__mockup-card"></div>
-                <div class="hero__mockup-card"></div>
-              </div>
-            </div>
-          </div>
+  <div class="lms-full-page">
+    <div class="lms-scroll-progress" aria-hidden="true"></div>
+    <header class="current-header">
+      <div class="current-container current-header__inner">
+        <a class="current-logo" href="#hero" aria-label="TEKHCEKH — home"><img src="images/texcex-logo-header.png" alt="ТЕХЦЕХ"></a>
+        <nav class="current-nav" aria-label="Main navigation">
+          <a href="#approach">What we build</a><a href="#platform-preview">Platform preview</a><a href="#process">How we work</a>
+        </nav>
+        <div class="current-controls">
+          <a class="current-lang" href="index.html" lang="ru" aria-label="Русская версия">RU</a>
+          <button class="current-theme" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Color theme"><span class="current-theme__sun" aria-hidden="true">☼</span><span class="current-theme__moon" aria-hidden="true">☾</span></button>
+          <a class="current-header-cta" href="#contact">Discuss your project</a>
         </div>
       </div>
-    </section>
+    </header>
 
-        <!-- ============ 2. PROBLEM ============ -->
-    <section class="problem" id="problem">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">Why course builders don't always work</h2>
-          <p class="section-lead">
-            GetCourse, Teachable, Kajabi and similar platforms solve one task: launching
-            courses fast. But they come with a cost you keep paying.
-          </p>
-        </div>
-
-        <div class="problem__grid">
-          <article class="problem__card">
-            <div class="problem__icon" aria-hidden="true">%</div>
-            <h3>A cut of every sale</h3>
-            <p>The more successful your project, the more you hand over to the platform — for something you could own yourself.</p>
-          </article>
-
-          <article class="problem__card">
-            <div class="problem__icon" aria-hidden="true">⚙</div>
-            <h3>Limited logic</h3>
-            <p>Custom tiers, non-standard access scenarios, specific integrations — everything hits "that's not supported."</p>
-          </article>
-
-          <article class="problem__card">
-            <div class="problem__icon" aria-hidden="true">🔒</div>
-            <h3>Weak content protection</h3>
-            <p>Videos and materials leak, and you can't stop it.</p>
-          </article>
-
-          <article class="problem__card">
-            <div class="problem__icon" aria-hidden="true">⛓</div>
-            <h3>Dependency</h3>
-            <p>Your customers, payments and content live in someone else's ecosystem. Terms change — you adapt.</p>
-          </article>
-        </div>
-
-        <p class="problem__closing">
-          If your project has outgrown the builder, it's time to own the platform instead of renting it.
-        </p>
-      </div>
-    </section>
-
-        <!-- ============ 3. WHAT I DO ============ -->
-    <section class="services" id="what-i-do">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">A platform that covers the entire customer journey</h2>
-          <p class="section-lead">
-            From the first sale to repeat purchases — all in one system that belongs to you.
-          </p>
-        </div>
-
-        <div class="services__grid">
-          <article class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
-            </div>
-            <h3>Sales site + payments</h3>
-            <p>Pricing pages, payment processing, automatic access delivery right after checkout. One or two payment gateways — so sales don't stop if something goes wrong.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-            </div>
-            <h3>Member portal</h3>
-            <p>Customers see their plan, access expiry and the content catalog: video, PDF, text. Works well on desktop and mobile.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-            </div>
-            <h3>Content protection</h3>
-            <p>Video is protected from downloading and tied to the user's session. Materials can't simply be "taken" and resold.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
-            </div>
-            <h3>Access automation</h3>
-            <p>Payment confirmed — access granted. No manual work, no risk of a customer paying and getting nothing.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M9 9v11"/></svg>
-            </div>
-            <h3>Admin panel</h3>
-            <p>Payments, user statuses, granting and revoking access, key metrics — all in one place.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
-            </div>
-            <h3>Post-launch support</h3>
-            <p>The platform isn't "delivered and forgotten": I monitor stability, fix issues, and develop it as the project grows.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-        <!-- ============ 4. COMPARISON / ECONOMICS ============ -->
-    <section class="comparison" id="comparison">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">The economics of the decision</h2>
-          <p class="section-lead">
-            A builder is cheap at the start — and expensive over time.
-            A custom LMS is a one-time investment in an asset you own.
-          </p>
-        </div>
-
-        <div class="comparison__table-wrap">
-          <table class="comparison__table">
-            <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col">Course builder</th>
-                <th scope="col" class="comparison__col--custom">Custom LMS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Sales commission</th>
-                <td>Yes, ongoing</td>
-                <td class="comparison__col--custom">None — the platform is yours</td>
-              </tr>
-              <tr>
-                <th scope="row">Logic and tiers</th>
-                <td>Within the platform's template</td>
-                <td class="comparison__col--custom">Built around your project</td>
-              </tr>
-              <tr>
-                <th scope="row">Content protection</th>
-                <td>Basic</td>
-                <td class="comparison__col--custom">Full</td>
-              </tr>
-              <tr>
-                <th scope="row">Ownership</th>
-                <td>Rental</td>
-                <td class="comparison__col--custom">An asset on your server</td>
-              </tr>
-              <tr>
-                <th scope="row">Project growth</th>
-                <td>Grows your cost too</td>
-                <td class="comparison__col--custom">Grows only your revenue</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="comparison__note">
-          <p>
-            A ready-made custom LMS from Russian studios costs ₽600,000–1,500,000
-            (internationally, $40,000+). That sounds like a lot — until you compare it
-            with what a project hands over to a builder over years of operation.
-            Over a 2–3 year horizon, a custom platform pays for itself and then works only for you.
-          </p>
-        </div>
-      </div>
-    </section>
-
-        <!-- ============ 5. CASE STUDY ============ -->
-    <section class="case" id="case">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">How it works in production</h2>
-          <p class="section-lead">
-            "Fabrika Zagotovok" is a culinary club for which I built the combination of
-            a sales site and a closed learning platform. This isn't a prototype — it runs
-            with real people and real payments.
-          </p>
-        </div>
-
-        <div class="case__layout">
-          <div class="case__info">
-            <h3 class="case__subtitle">What was built</h3>
-            <ul class="case__list">
-              <li>Two tiers: the basic one leads to a private Telegram club, the premium one to the web platform.</li>
-              <li>Payments through a primary and a backup gateway — if one is down, sales continue.</li>
-              <li>Automatic access delivery after payment, with duplicate-payment protection.</li>
-              <li>A member portal with a content catalog: video, PDF collections, text.</li>
-              <li>Session-bound protected video.</li>
-              <li>An admin panel: payments, access, metrics.</li>
-            </ul>
-
-            <div class="case__tags">
-              <span class="tag">Production</span>
-              <span class="tag">Payments with failover</span>
-              <span class="tag">Video protection</span>
-              <span class="tag">Roles &amp; access</span>
-            </div>
+    <main>
+      <section class="current-hero" id="hero" aria-labelledby="hero-title">
+        <div class="current-container current-hero__inner">
+          <div class="current-copy" id="approach">
+            <span class="current-eyebrow">Individual platforms for launches</span>
+            <h1 class="current-title" id="hero-title">Your materials <span class="current-title__accent">won't show up</span> on leak forums.</h1>
+            <p class="current-subtitle">We build closed platforms for creators, producer teams, and private communities. Participants access materials inside the project, while we take responsibility for protection.</p>
+            <p class="current-detail">We design the structure, member accounts, and admin panel for your specific project—not from a ready-made template.</p>
+            <div class="current-actions"><a class="current-button current-button--cta" href="#contact">Discuss your project</a><a class="current-button current-button--secondary" href="#platform-preview">View the interface</a></div>
+            <ul class="current-points" aria-label="Key terms"><li>Launch from two weeks after the brief</li><li>We follow Russian Federal Law 152-FZ</li><li>The platform is yours after handover</li></ul>
           </div>
 
-          <div class="case__gallery">
-            <!-- placeholders: replace with real screenshots -->
-            <figure class="case__shot case__shot--wide">
-              <div class="case__shot-placeholder">
-                <span>Screenshot: homepage</span>
+          <figure class="current-visual" id="platform-preview">
+            <div class="current-visual-heading"><span>Case and admin panel</span><span class="current-project-count">3 real screens from one case</span></div>
+            <div class="ac-carousel" id="caseCarousel" role="region" aria-roledescription="carousel" aria-label="Real platform screens from the Fabrika Zagotovok case" tabindex="0">
+              <div class="ac-deck"><div class="ac-stack">
+                <div class="ac-card ac-peek" aria-hidden="true"><img id="carouselPeek" src="images/admin-payments-redacted.png" alt=""></div>
+                <div class="ac-card ac-active" id="carouselActive" role="group" aria-roledescription="slide" aria-label="1 of 3: Content library"><img id="carouselImage" src="images/fabrika-library.png" alt="Member library with videos and files for a food-preserving club"></div>
+              </div></div>
+              <div class="ac-caption"><div class="ac-caption-copy" aria-live="polite" aria-atomic="true"><strong id="carouselTitle">Content library</strong><p id="carouselDescription">A real member screen from the Fabrika Zagotovok case.</p></div>
+                <div class="ac-controls"><span class="ac-count" id="carouselCount">01 / 03</span><button class="ac-arrow" type="button" data-carousel-prev aria-label="Previous screen">←</button><button class="ac-arrow" type="button" data-carousel-next aria-label="Next screen">→</button></div>
               </div>
-              <figcaption>Sales site</figcaption>
-            </figure>
+              <div class="ac-dots" role="group" aria-label="Choose a screen">
+                <button class="ac-dot" type="button" data-carousel-go="0" aria-label="Show screen: Content library" aria-pressed="true"></button>
+                <button class="ac-dot" type="button" data-carousel-go="1" aria-label="Show screen: Payment support" aria-pressed="false"></button>
+                <button class="ac-dot" type="button" data-carousel-go="2" aria-label="Show screen: Access check" aria-pressed="false"></button>
+              </div>
+            </div>
+            <figcaption class="current-case-note">Library, payment support, and access checks. Client data and working metrics are hidden in the screenshots.</figcaption>
+          </figure>
+        </div>
+      </section>
 
-            <figure class="case__shot">
-              <div class="case__shot-placeholder">
-                <span>Screenshot: member portal</span>
-              </div>
-              <figcaption>Member portal</figcaption>
-            </figure>
-
-            <figure class="case__shot">
-              <div class="case__shot-placeholder">
-                <span>Screenshot: admin panel</span>
-              </div>
-              <figcaption>Admin panel</figcaption>
-            </figure>
-
-            <figure class="case__shot case__shot--wide">
-              <div class="case__shot-placeholder">
-                <span>Screenshot: mobile version</span>
-              </div>
-              <figcaption>Mobile version</figcaption>
-            </figure>
+      <section class="lms-section lms-problems" aria-labelledby="problems-title">
+        <div class="lms-container">
+          <div class="lms-problem-intro"><div class="lms-section-head" data-reveal>
+            <p class="lms-kicker">When standard tools feel limiting</p><h2 class="lms-heading" id="problems-title">Your launch shouldn't have to follow someone else's playbook</h2>
+            <p class="lms-lead">We first learn how your project works. Then we build a closed platform around its needs.</p><a class="lms-ink-link" href="#core">What's included in the foundation <span aria-hidden="true">↓</span></a>
+          </div><p class="lms-problem-aside" data-reveal>A launch, online product, and private community can all work differently. The platform should fit your process—not the other way around.</p></div>
+          <div class="lms-problem-grid">
+            <article class="lms-problem-card" data-reveal><div class="lms-problem-top"><span class="lms-problem-number">01 / YOUR NEED</span><span class="lms-problem-icon" aria-hidden="true">↻</span></div><h3>Costs keep recurring</h3><p>Course builders require ongoing payments. As your project grows, it matters how pricing and terms change.</p></article>
+            <article class="lms-problem-card" data-reveal><div class="lms-problem-top"><span class="lms-problem-number">02 / YOUR NEED</span><span class="lms-problem-icon" aria-hidden="true">↔</span></div><h3>Your process has to adapt</h3><p>Not every launch works the same way. When your workflow doesn't fit a preset, extra steps appear.</p></article>
+            <article class="lms-problem-card" data-reveal><div class="lms-problem-top"><span class="lms-problem-number">03 / YOUR NEED</span><span class="lms-problem-icon" aria-hidden="true">•••</span></div><h3>Admin takes time from the team</h3><p>Managing access, adding materials, and handling routine questions distract from launches and members.</p></article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-        <!-- ============ 6. PROCESS ============ -->
-    <section class="process" id="process">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">From idea to launch</h2>
-          <p class="section-lead">
-            A clear process without surprises — you know what's happening at every stage.
-          </p>
-        </div>
-
-        <ol class="process__steps">
-          <li class="process__step">
-            <span class="process__num">01</span>
-            <div class="process__body">
-              <h3>We discuss the project</h3>
-              <p>Tiers, audience, content, payments — what's needed and how it works in your model.</p>
+      <section class="lms-section lms-tailored" id="core" aria-labelledby="core-title">
+        <div class="lms-container">
+          <div class="lms-tailored-head" data-reveal><div><p class="lms-kicker">The foundation</p><h2 class="lms-heading" id="core-title">The platform is built around your project</h2></div><p class="lms-lead">We start with a brief: who your participants are, how the launch works, and what needs to happen inside the platform.</p></div>
+          <div class="lms-core-showcase">
+            <div class="lms-orbit" data-reveal role="img" aria-label="Platform diagram: project, participants, materials, and team"><div class="lms-orbit-ring"></div><div class="lms-orbit-ring lms-orbit-ring--inner"></div><div class="lms-orbit-center"><span>Built around you</span><strong>Closed platform</strong></div><div class="lms-orbit-chip lms-orbit-chip--one"><span aria-hidden="true">○</span> Members</div><div class="lms-orbit-chip lms-orbit-chip--two"><span aria-hidden="true">▤</span> Materials</div><div class="lms-orbit-chip lms-orbit-chip--three"><span aria-hidden="true">▣</span> Team</div></div>
+            <div class="lms-core-list">
+              <article class="lms-core-card" data-reveal><span class="lms-core-card-icon" aria-hidden="true">○</span><h3>Member account</h3><p>Participants sign in to the closed platform with their own access.</p></article>
+              <article class="lms-core-card" data-reveal><span class="lms-core-card-icon" aria-hidden="true">▤</span><h3>Project materials</h3><p>We place the initial content in a structure designed for your project.</p></article>
+              <article class="lms-core-card" data-reveal><span class="lms-core-card-icon" aria-hidden="true">⌑</span><h3>Access management</h3><p>We set up participant access and help keep it organized.</p></article>
+              <article class="lms-core-card" data-reveal><span class="lms-core-card-icon" aria-hidden="true">▣</span><h3>Basic admin panel</h3><p>Your team can see the main working sections and platform status.</p></article>
             </div>
-          </li>
-          <li class="process__step">
-            <span class="process__num">02</span>
-            <div class="process__body">
-              <h3>I design</h3>
-              <p>Page structure, access scenarios, payment flow.</p>
-            </div>
-          </li>
-          <li class="process__step">
-            <span class="process__num">03</span>
-            <div class="process__body">
-              <h3>I build</h3>
-              <p>Sales site, portal, admin panel, integrations.</p>
-            </div>
-          </li>
-          <li class="process__step">
-            <span class="process__num">04</span>
-            <div class="process__body">
-              <h3>We launch</h3>
-              <p>We test payments and access, then go to production.</p>
-            </div>
-          </li>
-          <li class="process__step">
-            <span class="process__num">05</span>
-            <div class="process__body">
-              <h3>I support</h3>
-              <p>The platform lives and grows with the project.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-        <!-- ============ 7. SCOPE BOUNDARIES ============ -->
-    <section class="boundaries" id="boundaries">
-      <div class="container">
-        <div class="section-head text-center">
-          <h2 class="section-title">What's not included</h2>
-          <p class="section-lead">
-            To avoid surprises — this is not a course builder.
-          </p>
-        </div>
-
-        <div class="boundaries__box">
-          <ul class="boundaries__list">
-            <li>No built-in course editor</li>
-            <li>No built-in tests or exams</li>
-            <li>No certificates</li>
-            <li>No complex progress tracking</li>
-          </ul>
-          <p class="boundaries__note">
-            If you need those, we discuss them separately.
-            What is included is built for your project and belongs to you.
-          </p>
-        </div>
-      </div>
-    </section>
-
-        <!-- ============ 8. CTA + FORM ============ -->
-    <section class="cta" id="contact">
-      <div class="container">
-        <div class="cta__box">
-          <div class="cta__content">
-            <h2 class="cta__title">Shall we discuss your project?</h2>
-            <p class="cta__text">
-              Tell me a bit about the task — I'll get in touch to discuss details,
-              timelines and cost. No obligations.
-            </p>
           </div>
-
-          <form class="cta__form" id="contactForm" novalidate>
-            <div class="form-field">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="What should I call you" required autocomplete="name">
-            </div>
-
-            <div class="form-field">
-              <label for="contact">Contact</label>
-              <input type="text" id="contact" name="contact" placeholder="Telegram, phone or email" required autocomplete="off">
-            </div>
-
-            <div class="form-field">
-              <label for="message">Briefly about the project</label>
-              <textarea id="message" name="message" placeholder="What the project is, the task, what already exists" rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn--cta btn--lg cta__submit">Send</button>
-
-            <p class="cta__form-note" id="formNote" role="status" aria-live="polite"></p>
-          </form>
+          <aside class="lms-base-note" data-reveal><strong>We add the initial materials</strong><span>Self-service uploads aren't part of the foundation. If your team needs autonomy, we can design and add that separately.</span></aside>
         </div>
+      </section>
 
-        <p class="cta__signature">TEKHCEKH</p>
-      </div>
-    </section>
+      <section class="lms-section lms-options" id="addons" aria-labelledby="addons-title">
+        <div class="lms-container">
+          <div class="lms-options-head"><div class="lms-section-head" data-reveal><p class="lms-kicker">Optional features</p><h2 class="lms-heading" id="addons-title">Add features to fit your workflow</h2><p class="lms-lead">We agree on the scope in advance. Only what your project actually needs.</p></div><div class="lms-addon-count" data-reveal aria-label="Options are scoped individually"><strong>+</strong><span>by request</span></div></div>
+          <div class="lms-addon-grid">
+            <article class="lms-addon" data-reveal><button class="lms-addon-button" type="button" aria-expanded="false" aria-controls="addon-materials"><span class="lms-addon-number">OPTION 01</span><span class="lms-addon-arrow" aria-hidden="true">↗</span><span class="lms-addon-title">Add materials independently</span><span class="lms-addon-summary">Your team can update content without a separate request.</span><span class="lms-addon-state">Scoped separately</span></button><div class="lms-addon-extra" id="addon-materials" hidden><p>If content changes often, we can design simple admin navigation and add self-service uploads.</p></div></article>
+            <article class="lms-addon" data-reveal><button class="lms-addon-button" type="button" aria-expanded="false" aria-controls="addon-access"><span class="lms-addon-number">OPTION 02</span><span class="lms-addon-arrow" aria-hidden="true">↗</span><span class="lms-addon-title">Manage access manually</span><span class="lms-addon-summary">Hand over part of the day-to-day work to your team.</span><span class="lms-addon-state">Agreed in the brief</span></button><div class="lms-addon-extra" id="addon-access" hidden><p>We define who can do what—for example, grant or change a participant's access.</p></div></article>
+            <article class="lms-addon" data-reveal><button class="lms-addon-button" type="button" aria-expanded="false" aria-controls="addon-analytics"><span class="lms-addon-number">OPTION 03</span><span class="lms-addon-arrow" aria-hidden="true">↗</span><span class="lms-addon-title">Track project metrics</span><span class="lms-addon-summary">Bring relevant numbers together in a useful view.</span><span class="lms-addon-state">By request</span></button><div class="lms-addon-extra" id="addon-analytics" hidden><p>We choose the metrics and dashboard format around the needs of your launch or community.</p></div></article>
+            <article class="lms-addon" data-reveal><button class="lms-addon-button" type="button" aria-expanded="false" aria-controls="addon-chat"><span class="lms-addon-number">OPTION 04</span><span class="lms-addon-arrow" aria-hidden="true">↗</span><span class="lms-addon-title">Communicate inside the platform</span><span class="lms-addon-summary">A member chat or webinar room.</span><span class="lms-addon-state">By request</span></button><div class="lms-addon-extra" id="addon-chat" hidden><p>We choose a format that fits your participants' journey and your team's work.</p></div></article>
+            <article class="lms-addon" data-reveal><button class="lms-addon-button" type="button" aria-expanded="false" aria-controls="addon-homework"><span class="lms-addon-number">OPTION 05</span><span class="lms-addon-arrow" aria-hidden="true">↗</span><span class="lms-addon-title">Collect assignments</span><span class="lms-addon-summary">Submissions and feedback from a curator.</span><span class="lms-addon-state">By request</span></button><div class="lms-addon-extra" id="addon-homework" hidden><p>We agree how participants submit work and how a curator reviews it and responds.</p></div></article>
+            <article class="lms-addon" data-reveal><button class="lms-addon-button" type="button" aria-expanded="false" aria-controls="addon-support"><span class="lms-addon-number">OPTION 06</span><span class="lms-addon-arrow" aria-hidden="true">↗</span><span class="lms-addon-title">Keep us on for administration</span><span class="lms-addon-summary">Continue working with us after launch.</span><span class="lms-addon-state">Separate service</span></button><div class="lms-addon-extra" id="addon-support" hidden><p>By agreement, we can add new materials and help your team with ongoing platform tasks.</p></div></article>
+          </div>
+        </div>
+      </section>
 
-  </main>
+      <section class="lms-section lms-process" id="process" aria-labelledby="process-title">
+        <div class="lms-container">
+          <div class="lms-process-head"><div class="lms-section-head" data-reveal><p class="lms-kicker">A clear way of working</p><h2 class="lms-heading" id="process-title">From brief to launch—we work together</h2></div><p class="lms-lead" data-reveal>At every stage, you'll know what's ready, what we need from you, and what comes next.</p></div>
+          <div class="lms-process-tabs" role="group" aria-label="Platform project stages" data-reveal><span class="lms-process-fill" aria-hidden="true" style="transform:scaleX(.2)"></span>
+            <button class="lms-process-tab" type="button" data-step="0" aria-pressed="true"><span class="lms-process-tab-dot">01</span><span class="lms-process-tab-label">Goals and audience</span></button>
+            <button class="lms-process-tab" type="button" data-step="1" aria-pressed="false"><span class="lms-process-tab-dot">02</span><span class="lms-process-tab-label">Structure and infrastructure</span></button>
+            <button class="lms-process-tab" type="button" data-step="2" aria-pressed="false"><span class="lms-process-tab-dot">03</span><span class="lms-process-tab-label">Materials and features</span></button>
+            <button class="lms-process-tab" type="button" data-step="3" aria-pressed="false"><span class="lms-process-tab-dot">04</span><span class="lms-process-tab-label">Review and updates</span></button>
+            <button class="lms-process-tab" type="button" data-step="4" aria-pressed="false"><span class="lms-process-tab-dot">05</span><span class="lms-process-tab-label">Training and launch</span></button>
+          </div>
+          <div class="lms-process-panel is-visible" aria-live="polite" data-reveal><span class="lms-process-panel-number" id="processNumber">01</span><div class="lms-process-panel-copy"><span id="processIndex">Step 1 of 5</span><h3 id="processTitle">Brief</h3><p id="processBody">We review the product, participants, materials, and launch flow. This is when the timeline starts.</p></div><span class="lms-process-chip" id="processChip">Project starts</span></div>
+          <p class="lms-timing" data-reveal><strong>Launch takes from two weeks after the brief.</strong> We agree on the exact timeline after planning.</p>
+        </div>
+      </section>
 
-    <!-- ============ FOOTER ============ -->
-  <footer class="site-footer">
-    <div class="container footer__inner">
-      <div class="footer__brand-col">
-        <span class="footer__brand">TEKHCEKH</span>
-        <span class="footer__tagline">Custom LMS for your project</span>
-      </div>
-      <nav class="footer__nav" aria-label="Футер">
-        <a href="#what-i-do">What I Do</a>
-        <a href="#comparison">Comparison</a>
-        <a href="#case">Case Study</a>
-        <a href="#contact">Discuss your project</a>
-      </nav>
-      <span class="footer__copy">© <span id="year"></span></span>
-    </div>
-  </footer>
+      <section class="lms-section lms-safety" aria-labelledby="safety-title">
+        <div class="lms-container lms-safety-layout">
+          <div class="lms-safety-art" data-reveal role="img" aria-label="Protection for access, media, and personal data"><div class="lms-safety-orbit"></div><div class="lms-safety-seal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.5 8.3-8 10-4.5-1.7-8-5-8-10V6z"></path><path d="m8.5 12 2.2 2.2 4.8-5"></path></svg><strong>Closed</strong><span>Under control</span></div><span class="lms-safety-tag lms-safety-tag--one">Member access</span><span class="lms-safety-tag lms-safety-tag--two">Media protection</span><span class="lms-safety-tag lms-safety-tag--three">152-FZ</span></div>
+          <div class="lms-safety-copy" data-reveal><p class="lms-kicker">Peace of mind for your team and members</p><h2 class="lms-heading" id="safety-title">We take responsibility for protection and reliability</h2><p class="lms-lead">We plan closed access, media protection, and content hosting around your project. The platform isn't dependent on a single service.</p>
+            <div class="lms-safety-points">
+              <div class="lms-safety-point"><span class="lms-safety-point-number">01</span><p><strong>Materials stay inside the project.</strong> Participants access them through the closed platform.</p></div>
+              <div class="lms-safety-point"><span class="lms-safety-point-number">02</span><p><strong>Data handled by the rules.</strong> We follow Russian Federal Law 152-FZ when processing personal data.</p></div>
+              <div class="lms-safety-point"><span class="lms-safety-point-number">03</span><p><strong>The platform remains yours.</strong> After acceptance, we hand it over to your team or continue administering it by agreement.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <script src="js/script.js"></script>
+      <section class="lms-section lms-case" aria-labelledby="case-title">
+        <div class="lms-container"><div class="lms-case-card" data-reveal>
+          <div class="lms-case-copy"><span class="lms-case-stamp">A real project example</span><h2 class="lms-case-title" id="case-title">“Fabrika Zagotovok”</h2><p>A closed platform for a food-preserving club: members access materials in their accounts, while the team manages access and payment support. The carousel above shows real screens from this case; client data and working metrics are hidden.</p><div class="lms-case-tags" aria-label="What the case includes"><span>Member account</span><span>Materials</span><span>Payment support</span></div><p class="lms-case-caption">This is one project. The structure and features of your platform are scoped separately after the brief.</p></div>
+          <aside class="lms-case-side"><span>Live case</span><strong>One project. Its own rules.</strong><p>Open the public demo to see the platform in action.</p><a class="lms-case-link" href="https://platform-clubfabrika3.ru/" target="_blank" rel="noopener noreferrer">Open demo <span aria-hidden="true">↗</span></a></aside>
+        </div></div>
+      </section>
+
+      <section class="lms-section lms-cost" id="contact" aria-labelledby="cost-title">
+        <div class="lms-container"><div class="lms-cost-panel" data-reveal>
+          <div class="lms-cost-main"><p class="lms-kicker">Project cost</p><p class="lms-price-label">Starting point for the foundation</p><h2 class="lms-price" id="cost-title">from 70,000 <span>₽</span></h2><p class="lms-price-note">This is a preliminary estimate. We set the final scope and price after the brief, based on the project's needs and selected features. After handover, there's no recurring platform fee—only infrastructure costs remain.</p></div>
+          <div class="lms-cost-details">
+            <div class="lms-cost-detail"><span class="lms-cost-detail-mark" aria-hidden="true">✓</span><div><strong>One-time payment</strong><p>For the agreed foundation of your platform.</p></div></div>
+            <div class="lms-cost-detail"><span class="lms-cost-detail-mark" aria-hidden="true">↗</span><div><strong>One week of support</strong><p>Team training and support after launch are included.</p></div></div>
+            <div class="lms-cost-detail"><span class="lms-cost-detail-mark" aria-hidden="true">◷</span><div><strong>From two weeks</strong><p>The timeline starts after the brief.</p></div></div>
+          </div>
+        </div></div>
+      </section>
+
+      <section class="lms-bottom-cta" aria-label="Discuss your project"><div class="lms-container lms-bottom-inner"><div data-reveal><p>TEKHCEKH · Individual platforms for launches</p><h2>Tell us how your project works</h2></div><a class="lms-bottom-link" href="#contact" data-reveal>Discuss your project <span aria-hidden="true">→</span></a></div></section>
+    </main>
+    <footer class="lms-footer"><div class="lms-container lms-footer-inner"><span>TEKHCEKH · Mini-LMS built for your project</span><span>Scope and terms agreed after the brief · © <span id="year"></span></span></div></footer>
+  </div>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
