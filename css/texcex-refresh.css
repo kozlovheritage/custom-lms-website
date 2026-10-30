@@ -423,11 +423,13 @@ button:focus-visible {
 .lms-problem-icon,
 .lms-core-card-icon,
 .lms-orbit-chip > span,
-.lms-cost-detail-mark { font-size: 0 !important; --ui-icon: var(--icon-panel); }
+.lms-cost-detail-mark { position: relative; font-size: 0 !important; --ui-icon: var(--icon-panel); }
+/* Hidden fallback text is still an anonymous grid item. Anchor the drawing,
+   not the combined drawing/text tracks, to the container's actual center. */
 .lms-problem-icon::before,
 .lms-core-card-icon::before,
 .lms-orbit-chip > span::before,
-.lms-cost-detail-mark::before { display: block; width: 18px; height: 18px; background: currentColor; -webkit-mask: var(--ui-icon) center / contain no-repeat; mask: var(--ui-icon) center / contain no-repeat; content: ""; }
+.lms-cost-detail-mark::before { position: absolute; top: 50%; left: 50%; display: block; width: 18px; height: 18px; transform: translate(-50%, -50%); background: currentColor; -webkit-mask: var(--ui-icon) center / contain no-repeat; mask: var(--ui-icon) center / contain no-repeat; content: ""; }
 .lms-orbit-chip > span { display: grid; width: 16px; height: 16px; flex: 0 0 16px; place-items: center; }
 .lms-orbit-chip > span::before { width: 16px; height: 16px; }
 .lms-core-card:nth-child(1) .lms-core-card-icon,
@@ -442,22 +444,26 @@ button:focus-visible {
 .lms-cost-detail:nth-child(1) .lms-cost-detail-mark { --ui-icon: var(--icon-check); }
 .lms-cost-detail:nth-child(2) .lms-cost-detail-mark { --ui-icon: var(--icon-user); }
 
-/* Font-independent controls: the text glyphs remain decorative fallbacks. */
+/* Each font-independent control has a fixed box for its centered drawing. */
 .current-theme__sun,
 .current-theme__moon,
-.ac-arrow,
 .lms-ink-link span,
 .lms-case-link span,
-.lms-bottom-link span { font-size: 0; }
+.lms-bottom-link span { position: relative; display: block; width: 18px; height: 18px; flex: 0 0 18px; font-size: 0; line-height: 0; }
+.ac-arrow { position: relative; font-size: 0; }
 .current-theme__sun::before,
 .current-theme__moon::before,
 .ac-arrow::before,
 .lms-ink-link span::before,
 .lms-case-link span::before,
 .lms-bottom-link span::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: block;
   width: 18px;
   height: 18px;
+  transform: translate(-50%, -50%);
   background: currentColor;
   -webkit-mask: var(--control-icon) center / contain no-repeat;
   mask: var(--control-icon) center / contain no-repeat;
@@ -469,9 +475,9 @@ button:focus-visible {
 .lms-ink-link span,
 .lms-case-link span,
 .lms-bottom-link span { --control-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12h16m-6-6 6 6-6 6'/%3E%3C/svg%3E"); }
-.ac-arrow[data-carousel-prev]::before { transform: rotate(180deg); }
-.lms-ink-link span::before { transform: rotate(90deg); }
-.lms-case-link span::before { transform: rotate(-45deg); }
+.ac-arrow[data-carousel-prev]::before { transform: translate(-50%, -50%) rotate(180deg); }
+.lms-ink-link span::before { transform: translate(-50%, -50%) rotate(90deg); }
+.lms-case-link span::before { transform: translate(-50%, -50%) rotate(-45deg); }
 
 /* Problem and project core */
 .lms-problems { overflow: hidden; background: var(--bluewash); }
@@ -551,11 +557,11 @@ button:focus-visible {
 .lms-addon-number { color: #d4c089; font-size: 10px; font-weight: 700; letter-spacing: .1em; }
 .lms-addon-arrow { position: relative; display: grid; width: 29px; height: 29px; grid-column: 2; grid-row: 1 / span 2; place-items: center; border: 1px solid rgba(255,255,255,.31); border-radius: 50%; color: #e1cf9d; font-size: 0; }
 .lms-addon-arrow::before,
-.lms-addon-arrow::after { position: absolute; border-radius: 2px; background: currentColor; content: ""; transition: transform .2s ease; }
+.lms-addon-arrow::after { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 2px; background: currentColor; content: ""; transition: transform .2s ease; }
 .lms-addon-arrow::before { width: 10px; height: 2px; }
 .lms-addon-arrow::after { width: 2px; height: 10px; }
 .lms-addon-button[aria-expanded="true"] .lms-addon-arrow { border-color: var(--gold-light); color: var(--gold-light); }
-.lms-addon-button[aria-expanded="true"] .lms-addon-arrow::after { transform: scaleY(0); }
+.lms-addon-button[aria-expanded="true"] .lms-addon-arrow::after { transform: translate(-50%, -50%) scaleY(0); }
 .lms-addon-title { max-width: 230px; color: #fff; font-size: 16px; font-weight: 700; letter-spacing: -.02em; line-height: 1.25; }
 .lms-addon-summary { grid-column: 1 / -1; max-width: 290px; color: #c5d0dd; font-size: 12px; line-height: 1.6; }
 .lms-addon-state { grid-column: 1 / -1; margin-top: 1px; color: var(--gold-light); font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
