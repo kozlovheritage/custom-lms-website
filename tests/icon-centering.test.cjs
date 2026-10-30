@@ -16,7 +16,7 @@ const selectors = [
 ].join(",");
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-test("vector drawings stay centered inside their containers", { timeout: 90000 }, async t => {
+test("carousel containment and vector centering hold from phones to desktop", { timeout: 180000 }, async t => {
   assert.equal(typeof WebSocket, "function", "This browser check requires Node 22+");
   const server = http.createServer((req, res) => {
     const relative = decodeURIComponent(new URL(req.url, "http://localhost").pathname);
@@ -84,20 +84,54 @@ test("vector drawings stay centered inside their containers", { timeout: 90000 }
   await send("Page.enable");
   await send("DOM.enable");
   const failures = [];
+  const layoutFailures = [];
   let measured = 0;
+  let layouts = 0;
+  const viewports = [
+    [320, 740], [360, 780], [375, 812], [390, 844], [430, 932],
+    [540, 900], [700, 1000], [701, 1000], [768, 1024],
+    [980, 1100], [981, 1100], [1024, 1366], [1100, 900], [1101, 900],
+    [1280, 720], [1366, 768], [1440, 900], [1536, 864], [1920, 1080],
+    [667, 375], [844, 390], [1024, 600],
+  ];
   for (const lang of ["ru", "en"]) {
     await send("Page.navigate", {
       url: `http://127.0.0.1:${server.address().port}/${lang === "ru" ? "index.html" : "index.en.html"}`,
     });
     await wait(600);
     await evaluate("document.fonts.ready.then(() => true)");
-    for (const width of [320, 375, 390, 430, 768, 1024]) {
+    for (const [width, height] of viewports) {
       await send("Emulation.setDeviceMetricsOverride", {
-        width, height: 900, deviceScaleFactor: 2, mobile: true,
+        width, height, deviceScaleFactor: 2, mobile: true,
       });
       await wait(180);
       for (const theme of ["light", "dark"]) {
         await evaluate(`document.documentElement.dataset.theme = "${theme}"`);
+        const problems = await evaluate(`(() => {
+          const figure = document.querySelector(".current-visual");
+          const frame = figure.getBoundingClientRect();
+          const problems = [];
+          if (parseFloat(getComputedStyle(figure).borderTopWidth) < 1) {
+            problems.push("The carousel must have its own real border");
+          }
+          for (const selector of [".current-visual-heading", ".ac-active", ".ac-peek",
+              ".ac-caption", ".ac-controls", ".ac-dots", ".current-case-note"]) {
+            const box = figure.querySelector(selector).getBoundingClientRect();
+            const gaps = [box.left - frame.left, frame.right - box.right,
+              box.top - frame.top, frame.bottom - box.bottom];
+            if (gaps.some(gap => gap < 6)) problems.push({ selector, gaps });
+          }
+          if (document.documentElement.scrollWidth > innerWidth + 1) {
+            problems.push("Page overflows horizontally");
+          }
+          const controls = document.querySelector(".current-controls").getBoundingClientRect();
+          if (controls.right > innerWidth - 8 || controls.left < 0) {
+            problems.push("Header controls overflow");
+          }
+          return problems;
+        })()`);
+        layouts++;
+        if (problems.length) layoutFailures.push({ lang, width, height, theme, problems });
         const { root: document } = await send("DOM.getDocument", { depth: -1 });
         const { nodeIds } = await send("DOM.querySelectorAll", { nodeId: document.nodeId, selector: selectors });
         for (const nodeId of nodeIds) {
@@ -127,7 +161,8 @@ test("vector drawings stay centered inside their containers", { timeout: 90000 }
       }
     }
   }
-  assert.ok(measured > 400, `Only ${measured} vector boxes checked`);
+  assert.ok(measured > 2000, `Only ${measured} vector boxes checked`);
+  assert.equal(layoutFailures.length, 0, JSON.stringify(layoutFailures.slice(0, 12), null, 2));
   assert.equal(failures.length, 0, JSON.stringify(failures.slice(0, 12), null, 2));
-  t.diagnostic(`${measured} vector boxes centered across 24 language/theme/width combinations`);
+  t.diagnostic(`${layouts} responsive layouts and ${measured} vector boxes checked, including desktop and landscape`);
 });

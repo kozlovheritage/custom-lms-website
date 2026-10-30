@@ -347,19 +347,9 @@ button:focus-visible {
   position: relative;
   min-width: 0;
   margin: 0;
-  padding: 21px 0 0 20px;
-}
-
-.current-visual::before {
-  position: absolute;
-  top: 0;
-  right: 15px;
-  bottom: 29px;
-  left: 0;
+  padding: 21px 20px 16px;
   border: 1px solid #cbd5e1;
   border-radius: 4px;
-  content: "";
-  pointer-events: none;
 }
 
 .current-visual::after {
@@ -379,18 +369,20 @@ button:focus-visible {
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  margin: 0 14px 8px 0;
+  margin: 0 0 8px;
   color: var(--ink);
   font-size: 12px;
   font-weight: 700;
 }
 
 .current-project-count { max-width: 52%; color: #65758a; font-size: 10px; font-weight: 600; text-align: right; }
-.current-case-note { position: relative; z-index: 1; margin: 7px 14px 0 0; color: #65758a; font-size: 10px; line-height: 1.45; }
+.current-case-note { position: relative; z-index: 1; margin: 8px 0 0; color: #65758a; font-size: 10px; line-height: 1.45; }
 
 /* Real case-screen carousel */
 .ac-carousel { position: relative; z-index: 1; color: var(--ink); outline: none; }
-.current-visual .ac-deck { padding: 10px 14px 12px 0; }
+/* Reserve space for the rotated back card; the figure's real border encloses
+   the entire carousel, controls and caption at every breakpoint. */
+.current-visual .ac-deck { padding: 12px 12px 12px 0; }
 .ac-stack { position: relative; width: 100%; aspect-ratio: 1.52; perspective: 1100px; touch-action: pan-y; }
 .ac-card { position: absolute; inset: 0; overflow: hidden; border: 1px solid #cbd5e1; border-radius: 4px; background: #fff; }
 .ac-card > img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none; }
@@ -742,10 +734,9 @@ button:focus-visible {
   .current-actions { margin-top: 18px; }
   .current-button { min-height: 46px; padding-inline: 15px; font-size: 12px; }
   .current-points { flex-direction: column; gap: 8px; margin-top: 17px; }
-  .current-visual { padding: 14px 12px 14px 11px; }
-  .current-visual::before { right: 0; bottom: 0; }
+  .current-visual { padding: 14px 12px; }
   .current-visual::after { top: 5px; left: 5px; width: 25px; }
-  .current-visual .ac-deck { padding: 7px 0 9px; }
+  .current-visual .ac-deck { padding-bottom: 9px; }
   .current-visual-heading { align-items: flex-start; font-size: 11px; }
   .current-project-count { max-width: 48%; font-size: 11px; }
   .ac-caption { align-items: stretch; flex-direction: column; gap: 10px; margin-inline: 0; }
@@ -918,7 +909,7 @@ html[data-theme="dark"] .current-detail,
 html[data-theme="dark"] .current-case-note,
 html[data-theme="dark"] .current-project-count { color: #bac8d9; }
 html[data-theme="dark"] .current-points { color: #ced9e6; }
-html[data-theme="dark"] .current-visual::before { border-color: #40536d; }
+html[data-theme="dark"] .current-visual { border-color: #40536d; }
 html[data-theme="dark"] .ac-card { border-color: #43566e; }
 html[data-theme="dark"] .ac-caption-copy strong { color: #edf2f7; }
 html[data-theme="dark"] .ac-caption-copy p,
