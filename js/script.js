@@ -229,6 +229,44 @@
   const processChip = document.getElementById("processChip");
   const processFill = document.querySelector(".lms-process-fill");
 
+  // Reserve the tallest step at the current width without changing the live
+  // selection or announcing measurement content to assistive technology.
+  function measureProcessPanel() {
+    if (!processPanel || typeof processPanel.cloneNode !== "function") return;
+    const probe = processPanel.cloneNode(true);
+    const title = probe.querySelector("#processTitle");
+    const body = probe.querySelector("#processBody");
+    const chip = probe.querySelector("#processChip");
+    if (!title || !body || !chip) return;
+    probe.querySelectorAll("[id]").forEach((element) => element.removeAttribute("id"));
+    probe.removeAttribute("id");
+    probe.removeAttribute("aria-live");
+    probe.setAttribute("aria-hidden", "true");
+    Object.assign(probe.style, {
+      position: "absolute", visibility: "hidden", pointerEvents: "none",
+      width: `${processPanel.getBoundingClientRect().width}px`,
+      minHeight: "0", height: "auto", top: "0", left: "0",
+      transform: "none", transition: "none",
+    });
+    processPanel.parentElement.appendChild(probe);
+    let height = 0;
+    steps.forEach((step) => {
+      title.textContent = step[0];
+      body.textContent = step[1];
+      chip.textContent = step[2];
+      height = Math.max(height, probe.getBoundingClientRect().height);
+    });
+    probe.remove();
+    processPanel.style.setProperty("--process-panel-height", `${Math.ceil(height)}px`);
+  }
+  measureProcessPanel();
+  if (document.fonts?.ready) document.fonts.ready.then(measureProcessPanel);
+  let processResizeTimer;
+  window.addEventListener("resize", () => {
+    window.clearTimeout(processResizeTimer);
+    processResizeTimer = window.setTimeout(measureProcessPanel, 120);
+  });
+
   document.querySelectorAll(".lms-process-tab").forEach((button) => {
     button.addEventListener("click", () => {
       const index = Number(button.dataset.step);
